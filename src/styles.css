@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.done {
+    text-decoration: line-through;
+}
+
+
+
+#content {
+    min-height: calc(100vh - 220px);
+}
+
+.footer {
+    height: 100px;
+}
