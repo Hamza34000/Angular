@@ -17,10 +17,10 @@
             </div>
             <table class="table">
                 <tbody>
-                    <tr *ngFor="let todo of todos; index as i">
+                    <tr style="color: darkgoldenrod;" *ngFor="let todo of todos; index as i">
                         <th scope="row">{{i+1}}</th>
                         <td class="{{(!todo.done)?'done':''}}" (click)="doTodo(i)">{{todo.name}}</td>
-                        <td (click)="deleteTodo(i)">x</td>
+                        <td class="pointer" style="color: red;" (click)="deleteTodo(i)">X</td>
                     </tr>
                 </tbody>
             </table>

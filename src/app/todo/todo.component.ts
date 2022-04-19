@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Todo } from '../shared/models/todo';
 import { TodoService } from '../shared/services/todo.service';
 
@@ -12,22 +13,29 @@ export class TodoComponent implements OnInit {
 
   todos: Todo[] = [];
   newTodo!: string;
+  idUser: number = 0;
+  todoDone!: boolean;
 
   constructor(
     private todoService: TodoService,
-  ) { }
+    private route:ActivatedRoute
+  ) {
+    let id = route.snapshot.paramMap.get("id");
+    if(id) this.idUser = parseInt(id);
+  }
 
   ngOnInit() {
     this.todoService
-    .findAll()
+    .findUserId(this.idUser)
     .subscribe((todos: Todo[])=>{
       this.todos = todos;
-    })
+    });
+
   }
 
   addTodo(){
     if(this.newTodo){
-      let todo = new Todo('',this.newTodo,true);
+      let todo = new Todo('',this.newTodo,true,this.idUser);
       this.todos.push(todo);
       this.newTodo = '';
 

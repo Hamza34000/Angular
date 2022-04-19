@@ -18,6 +18,13 @@ export class TodoService {
     return this.http.get<Todo[]>(this._urlTodosApi);
   }
 
+  // public findById(id:number): Observable<Todo[]>{
+  //   return this.http.get<Todo[]>(this._urlTodosApi);
+  // }
+  public findUserId(userId: number): Observable<Todo[]>{
+    return this.http.get<Todo[]>(this._urlTodosApi + '?idUser=' + userId);
+  }
+
   public addTodo(todo: Todo): Observable<Todo>{
     return this.http.post<Todo>(this._urlTodosApi,todo);
   }

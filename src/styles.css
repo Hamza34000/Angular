@@ -5,6 +5,14 @@
     text-decoration: line-through;
 }
 
+.done:hover {
+    cursor: pointer;
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
 
 
 #content {
