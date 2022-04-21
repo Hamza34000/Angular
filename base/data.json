@@ -2,170 +2,60 @@
   "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      }
+      "name": "Patricia Lebsack",
+      "mail": "Julianne.OConner@kory.org"
     },
     {
       "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
-      }
+      "name": "Chelsey Dietrich",
+      "mail": "Lucio_Hettinger@annie.ca"
     },
     {
       "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
-      }
+      "name": "Mrs. Dennis Schulist",
+      "mail": "Karley_Dach@jasper.info"
     },
     {
       "id": 4,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257",
-        "geo": {
-          "lat": "29.4572",
-          "lng": "-164.2990"
-        }
-      }
+      "name": "Kurtis Weissnat",
+      "mail": "Telly.Hoeger@billy.biz"
     },
     {
       "id": 5,
-      "name": "Chelsey Dietrich",
-      "username": "Kamren",
-      "email": "Lucio_Hettinger@annie.ca",
-      "address": {
-        "street": "Skiles Walks",
-        "suite": "Suite 351",
-        "city": "Roscoeview",
-        "zipcode": "33263",
-        "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
-        }
-      }
+      "name": "Nicholas Runolfsdottir V",
+      "mail": "Sherwood@rosamond.me"
     },
     {
       "id": 6,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
-      "address": {
-        "street": "Norberto Crossing",
-        "suite": "Apt. 950",
-        "city": "South Christy",
-        "zipcode": "23505-1337",
-        "geo": {
-          "lat": "-71.4197",
-          "lng": "71.7478"
-        }
-      }
+      "name": "Glenna Reichert",
+      "mail": "Chaim_McDermott@dana.io"
     },
     {
       "id": 7,
-      "name": "Kurtis Weissnat",
-      "username": "Elwyn.Skiles",
-      "email": "Telly.Hoeger@billy.biz",
-      "address": {
-        "street": "Rex Trail",
-        "suite": "Suite 280",
-        "city": "Howemouth",
-        "zipcode": "58804-1099",
-        "geo": {
-          "lat": "24.8918",
-          "lng": "21.8984"
-        }
-      }
+      "name": "Clementina DuBuque",
+      "mail": "Rey.Padberg@karina.biz"
     },
     {
       "id": 8,
-      "name": "Nicholas Runolfsdottir V",
-      "username": "Maxime_Nienow",
-      "email": "Sherwood@rosamond.me",
-      "address": {
-        "street": "Ellsworth Summit",
-        "suite": "Suite 729",
-        "city": "Aliyaview",
-        "zipcode": "45169",
-        "geo": {
-          "lat": "-14.3990",
-          "lng": "-120.7677"
-        }
-      }
+      "name": "Hamza Amhaouch",
+      "mail": "toto@toto.fr"
     },
     {
       "id": 9,
-      "name": "Glenna Reichert",
-      "username": "Delphine",
-      "email": "Chaim_McDermott@dana.io",
-      "address": {
-        "street": "Dayna Park",
-        "suite": "Suite 449",
-        "city": "Bartholomebury",
-        "zipcode": "76495-3109",
-        "geo": {
-          "lat": "24.6463",
-          "lng": "-168.8889"
-        }
-      }
+      "name": "Hamza",
+      "mail": "fkjjfjfjkfjkfj"
     },
     {
       "id": 10,
-      "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
-      "address": {
-        "street": "Kattie Turnpike",
-        "suite": "Suite 198",
-        "city": "Lebsackbury",
-        "zipcode": "31428-2261",
-        "geo": {
-          "lat": "-38.2386",
-          "lng": "57.2232"
-        }
-      }
+      "name": "hoho",
+      "mail": "hahahhjk,ls;q"
     }
   ],
   "todos": [
     {
       "id": "478773b4-a748-4312-ad29-f93d6e678b87",
       "name": "Faire la vaisselle",
-      "done": true,
+      "done": false,
       "idUser": 1
     },
     {
@@ -183,8 +73,122 @@
     {
       "id": "szH9OyR",
       "name": "faire à manger",
-      "done": true,
+      "done": false,
       "idUser": 1
+    },
+    {
+      "id": "YenpYe3",
+      "name": "hamza",
+      "done": false,
+      "idUser": 2
+    },
+    {
+      "id": "h24u4ro",
+      "name": "hahahah",
+      "done": false,
+      "idUser": 4
+    },
+    {
+      "id": "nvxGxkq",
+      "name": "Faire",
+      "done": false,
+      "idUser": 3
+    },
+    {
+      "id": "zGLXRwv",
+      "name": "ses",
+      "done": false,
+      "idUser": 4
+    },
+    {
+      "id": "WhUD3t_",
+      "name": "devoir",
+      "done": true,
+      "idUser": 5
+    },
+    {
+      "id": "e1ti944",
+      "name": "dormir",
+      "done": false,
+      "idUser": 6
+    },
+    {
+      "id": "_FgYJWa",
+      "name": "Boire",
+      "done": false,
+      "idUser": 7
+    },
+    {
+      "id": "HSNdDWJ",
+      "name": "Beaucoup",
+      "done": false,
+      "idUser": 8
+    },
+    {
+      "id": "8O1tMD_",
+      "name": "Dormir",
+      "done": false,
+      "idUser": 9
+    },
+    {
+      "id": "ekJh3gr",
+      "name": "Aller au ciné",
+      "done": false,
+      "idUser": 10
+    },
+    {
+      "id": "z4lAX3M",
+      "name": "Acheter des bonbons",
+      "done": false,
+      "idUser": 5
+    },
+    {
+      "id": "AVjkpc1",
+      "name": "acheter des bobons",
+      "done": false,
+      "idUser": 7
+    },
+    {
+      "id": "QhNEkYV",
+      "name": "hahah",
+      "done": false,
+      "idUser": 6
+    },
+    {
+      "id": "t6QH0Xs",
+      "name": "haha",
+      "done": false,
+      "idUser": 1
+    },
+    {
+      "id": "_TNOoaa",
+      "name": "Haha",
+      "done": false,
+      "idUser": 4
+    },
+    {
+      "id": "Q76VlGn",
+      "name": "Acheter des bonbons",
+      "done": false,
+      "idUser": 11
+    },
+    {
+      "id": "J032L_H",
+      "name": "test",
+      "done": true,
+      "idUser": 11
+    },
+    {
+      "id": "w3g0DdR",
+      "name": "nouvelle",
+      "done": false,
+      "idUser": 529
+    },
+    {
+      "id": "AQXszps",
+      "name": "tache ",
+      "done": true,
+      "idUser": 529
     }
   ]
 }

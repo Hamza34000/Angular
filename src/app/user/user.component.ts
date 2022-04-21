@@ -14,6 +14,8 @@ export class UserComponent implements OnInit {
 
   users: User[] = [];
   todos: Todo[] = [];
+  newUser!: string;
+  newMail!: string;
   constructor(
     private userService: UserService,
     private todoService: TodoService,
@@ -21,7 +23,7 @@ export class UserComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((users: User[]) => this.users = users);
+    this.refresh();
   }
 
   getTodo(){
@@ -35,6 +37,37 @@ export class UserComponent implements OnInit {
     this.router.navigate(["/todos",{id:id}])
   }
 
+  addUser(){
+    if(this.newUser){
+      let user = new User(Math.floor(Math.random() * 1000) + 1,this.newUser,this.newMail);
+      this.users.push(user);
+      this.newUser = '';
+      this.newMail = '';
+
+      this.userService.addUser(user).subscribe(user =>{
+        console.log(user);
+        this.refresh();
+      })
+
+    }
+  }
+
+  deleteUser(id: number){
+    
+    console.log(id.toString());
+    this.userService.deleteUser(id.toString()).subscribe(user =>{
+      console.log(user);
+      this.todos.splice(id,1);
+      this.refresh();
+
+    });
+
+    
+  }
+
+  refresh(){
+    this.userService.getUsers().subscribe((users: User[]) => this.users = users);
+  }
   
 
 

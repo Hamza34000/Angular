@@ -13,4 +13,12 @@ export class UserService {
   getUsers(): Observable<User[]>{
     return this.http.get<User[]>(environment.urlApi + "/users");
   }
+
+  public addUser(user: User): Observable<User>{
+    return this.http.post<User>(environment.urlApi +"/users",user);
+  }
+
+  public deleteUser(id: string): Observable<User>{
+    return this.http.delete<User>(environment.urlApi+'/users/'+id);
+  }
 }

@@ -1,18 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-
-.done {
-    text-decoration: line-through;
-}
-
-.done:hover {
-    cursor: pointer;
-}
-
-.pointer:hover{
-    cursor: pointer;
-}
-
+@import '~material-icons/iconfont/material-icons.css';
 
 
 #content {

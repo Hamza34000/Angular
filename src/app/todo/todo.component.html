@@ -1,41 +1,61 @@
-<ul class="nav justify-content-center">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Todo List</a>
-    </li>
-
-</ul>
-
-
-<div id="content" class="container">
-    <div class="row">
-        <div class="col">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Todo à faire" aria-label="Recipient's username"
-                    aria-describedby="button-addon2" [(ngModel)]="newTodo">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="addTodo()">Entrez
-                    Todo</button>
-            </div>
-            <table class="table">
-                <tbody>
-                    <tr style="color: darkgoldenrod;" *ngFor="let todo of todos; index as i">
-                        <th scope="row">{{i+1}}</th>
-                        <td class="{{(!todo.done)?'done':''}}" (click)="doTodo(i)">{{todo.name}}</td>
-                        <td class="pointer" style="color: red;" (click)="deleteTodo(i)">X</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">TodoPerUser</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link"  href="/home">User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/todos">Todos</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+
+<div id="todo-content" class="conntainer">
+    <h1>Todo List</h1>
+
+    <form class="todo-form">
+        <input type="text" name="title" id="title" placeholder="Entrez todo" [(ngModel)]="newTodo">
+        <div>
+            <button type="submit" class="btn-floating waves-effect waves-light green" (click)="addTodo()"><i
+                    class="material-icons">add</i></button>
+        </div>
+    </form>
+    
+    <ul class="todo-list">
+        <li *ngFor="let todo of todos; index as i">
+            <div *ngIf="!todo.done">
+                <div>{{todo.name}}</div>
+                <div>
+                    <button (click)="doTodo(i)" class="btn-floating waves-effect waves-light blue"><i
+                            class="material-icons">check</i></button>
+                    <button (click)="deleteTodo(i)" class="btn-floating waves-effect waves-light red"><i
+                            class="material-icons">delete</i></button>
+                </div>
+            </div>
+        </li>
+
+        <br><br>
+        <h5> Todo completed</h5>
+        <br>
+
+        <li *ngFor="let todo of todos; index as i">
+            <div *ngIf="todo.done">
+                <div>{{todo.name}}</div>
+                <div>
+                    <button (click)="doTodo(i)" class="btn-floating waves-effect waves-light orange"><i
+                            class="material-icons">clear</i></button>
+                    <button (click)="deleteTodo(i)" class="btn-floating waves-effect waves-light red"><i class="material-icons">delete</i></button>
+                </div>
+            </div>
+        </li>
+
+    </ul>
 </div>
-<div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-      </ul>
-      <p class="text-center text-muted">© 2021 Company, Inc</p>
-    </footer>
-  </div>

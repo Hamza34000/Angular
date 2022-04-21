@@ -25,22 +25,19 @@ export class TodoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.todoService
-    .findUserId(this.idUser)
-    .subscribe((todos: Todo[])=>{
-      this.todos = todos;
-    });
+    this.refresh();
 
   }
 
   addTodo(){
     if(this.newTodo){
-      let todo = new Todo('',this.newTodo,true,this.idUser);
+      let todo = new Todo('',this.newTodo,false,this.idUser);
       this.todos.push(todo);
       this.newTodo = '';
 
       this.todoService.addTodo(todo).subscribe(todo =>{
         console.log(todo);
+        this.refresh();
       })
 
     }
@@ -52,6 +49,9 @@ export class TodoComponent implements OnInit {
     
     this.todoService.updateTodo(this.todos[id]).subscribe(todo=>{
       console.log(todo);
+      this.refresh();
+
+      
     })
 
   }
@@ -63,6 +63,14 @@ export class TodoComponent implements OnInit {
     });
 
     this.todos.splice(id,1);
+  }
+
+  refresh(){
+    this.todoService
+    .findUserId(this.idUser)
+    .subscribe((todos: Todo[])=>{
+      this.todos = todos;
+    });
   }
 
 }
